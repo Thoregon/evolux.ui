@@ -1,8 +1,18 @@
 evolux.ui
 =========
 
+Webcomponents to build applications with meshups and extensions. 
 
-Webcomponents to build applications with meshups and extensions.
+Provides a 2 tier view definition and a 2 tier model definition.
+
+view definition
+- layout, multiple to support different devices
+- elements
+
+model definition
+- view model, bound to the view elements, but can be used to run headless UI tests
+- bounded context
+
 Dynamically load the UIComponent of the sub entities.
 Extend components by pointing with XPath to the location where to insert the component.
 Build generic UIs based on teh sub entities class or schema.
