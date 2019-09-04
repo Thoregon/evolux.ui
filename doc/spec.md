@@ -9,6 +9,8 @@ view definition
 - layout, multiple to support different devices
 - elements
 
+sub views can be replaced within a view definion by the user or another (view) component
+
 model definition
 - view model, bound to the view elements, but can be used to run headless UI tests
 - bounded context
