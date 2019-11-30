@@ -45,3 +45,18 @@ Wraps 'shadow.adoptedStyleSheets' when not available.
 ##View Definitions
 Are an extension of a 'bounded context' definition specialized to create a UI.
 
+## ViewObjectMirror
+An object directly representing a view model which is a mirror of a (part) bounded context. It is comprised 
+of entities, value objects and computations of the context
+
+For cooperative work, it supports modes of syncronisations:
+- immediate ... sync on each keystroke. e.g. for editor fields ...
+- changed   ... sync each 'field' change, use for setting like models which does not trigger expensive computations
+- collected ... collect all changes to the model and apply it in one transaction
+
+This is not only available for model components, but also for UI components enables syncing of UI between users/devices.
+
+With the layered architecture of this, it also possible to combine sync modes for local only and whole universe.
+It can also trigger distributed computations e.b. for data cubes.
+
+ 
