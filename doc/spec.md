@@ -28,22 +28,19 @@ The UI state is stored in this case on the users device as well as at the servic
 Delivers the clients UI state when the page is requestet, in case of a subpath the state is adjustet to display the
 content matching the subpath.
 
-    window.onbeforeunload = (event) => {}
-
 Definition: 
 - Browser back button works not like an undo button, deleting the last entered key or removing the 
 fresh created item, it is for navigation purpose, displaying the last view or closing a inquiry like the ESC button.
 - The 'UNDO' is only implemented as top layer, requesting the undo and displaying the result of the undo. Same applies to 'REDO'.
 
-The Registry listens also to DOM changes
-- [MutationObserver](https://developer.mozilla.org/de/docs/Web/API/MutationObserver)
-- [MutationObserverInit](https://developer.mozilla.org/de/docs/Web/API/MutationObserver#MutationObserverInit) --> childList=true, attributes=true, subtree=true, attributeOldValue=true
-
-
 Wraps 'shadow.adoptedStyleSheets' when not available.
 
 ##View Definitions
 Are an extension of a 'bounded context' definition specialized to create a UI.
+
+###Input Controls
+Input component for a property, based on the schema attibute type. 
+Default apperence, options for the view definition to change apperance e.g. to dropdown/checkbox.
 
 ## ViewObjectMirror
 An object directly representing a view model which is a mirror of a (part) bounded context. It is comprised 
@@ -59,4 +56,5 @@ This is not only available for model components, but also for UI components enab
 With the layered architecture of this, it also possible to combine sync modes for local only and whole universe.
 It can also trigger distributed computations e.b. for data cubes.
 
- 
+Get a rendering thread:
+-> https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame 
