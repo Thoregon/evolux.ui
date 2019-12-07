@@ -35,10 +35,10 @@ fresh created item, it is for navigation purpose, displaying the last view or cl
 
 Wraps 'shadow.adoptedStyleSheets' when not available.
 
-##View Definitions
+## View Definitions
 Are an extension of a 'bounded context' definition specialized to create a UI.
 
-###Input Controls
+### Input Controls
 Input component for a property, based on the schema attibute type. 
 Default apperence, options for the view definition to change apperance e.g. to dropdown/checkbox.
 
@@ -58,3 +58,12 @@ It can also trigger distributed computations e.b. for data cubes.
 
 Get a rendering thread:
 -> https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame 
+
+## Standard UI
+The settings for a11y, i18n, UI theme and User Settings must be available on every page/screen
+
+System status display (condensed wiht icons) must be available on every page/screen
+- sync status indicator
+- busy indicator
+- background indicator
+
