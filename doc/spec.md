@@ -38,6 +38,48 @@ Wraps 'shadow.adoptedStyleSheets' when not available.
 ## View Definitions
 Are an extension of a 'bounded context' definition specialized to create a UI.
 
+Based on a view model, builder offers a shortcut to create the viewmodel at once
+
+````js
+const builder = new ViewBuilder();
+const style = '<get the style from where ever>';    // can also be the result of StyleBuilder
+
+const orderTableView = builder.name('Orders')
+    .style(style)
+    .table()
+    .userCustomize(true)        // default
+    .viewmodel('Orders')
+        // 'interactive' delivers an interactive filter which is operated by the table
+        .from(universe.evolux.matter.orders.interactive.orderBy('date').desc)    
+    .addColumn()
+        .name('Num')
+        .format('#,##0')
+        .from('id')
+        .sortable(true)
+        // define all possible columns, also those which should not be displayed by default --> .view(false)
+        // the user can later customize it
+        .view(true)             
+    .addColumn()
+        .name('Customer')
+        from('address.name')
+        .sortable(true)
+        .view(true)
+    .addDetail()
+        .from('address.street')
+        .from('address.zip')
+        .from('address.city')
+    .build();
+    
+const orderItemTableView = builder.name('OrderItem')
+    .style(anotherStyle)
+    .appendTo(orderTableView)
+    .table()
+    .viewModel('OrderItem')
+        .fromParent('orderitems')
+    .addColumn('artNr')
+
+````
+
 ### Input Controls
 Input component for a property, based on the schema attibute type. 
 Default apperence, options for the view definition to change apperance e.g. to dropdown/checkbox.
