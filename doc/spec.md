@@ -50,7 +50,7 @@ const orderTableView = builder.name('Orders')
     .userCustomize(true)        // default
     .viewmodel('Orders')
         // 'interactive' delivers an interactive filter which is operated by the table
-        .from(universe.evolux.matter.orders.interactive.orderBy('date').desc)    
+        .from(universe.matter.orders.interactive.orderBy('date').desc)    
     .addColumn()
         .name('Num')
         .format('#,##0')
