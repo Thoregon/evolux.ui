@@ -84,6 +84,10 @@ const orderItemTableView = builder.name('OrderItem')
 Input component for a property, based on the schema attibute type. 
 Default apperence, options for the view definition to change apperance e.g. to dropdown/checkbox.
 
+## UI Element Controls
+Stored in Matter to communicate toe current state of UI components between same view or same viewed entities on
+multiple UI's, also on different clients.
+
 ## ViewObjectMirror
 An object directly representing a view model which is a mirror of a (part) bounded context. It is comprised 
 of entities, value objects and computations of the context
