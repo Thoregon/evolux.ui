@@ -113,3 +113,17 @@ System status display (condensed wiht icons) must be available on every page/scr
 - busy indicator
 - background indicator
 
+### Themes
+Collection of css classes in the correct order. Will be applied on the topmost element under 'body' or the
+specified one.
+
+Predefined themes:
+- bright
+    - t1
+    - t2
+    - t3
+- dark
+    - tdark1 tdark t1
+    - tdark2 tdark t2
+    - tdark3 tdark t3
+

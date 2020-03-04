@@ -14,3 +14,9 @@ ToDo
 - The Registry listens also to DOM changes?
     - [MutationObserver](https://developer.mozilla.org/de/docs/Web/API/MutationObserver)
     - [MutationObserverInit](https://developer.mozilla.org/de/docs/Web/API/MutationObserver#MutationObserverInit) --> childList=true, attributes=true, subtree=true, attributeOldValue=true
+
+Design
+======
+
+Great design:
+- http://get-d.net/home/about/
