@@ -35,6 +35,11 @@ fresh created item, it is for navigation purpose, displaying the last view or cl
 
 Wraps 'shadow.adoptedStyleSheets' when not available.
 
+## Webapps (PWA)
+let you define a map for URL's with app components (PWA)
+parameters - from path, query, headers - can be used to select the APP
+
+
 ## View Definitions
 Are an extension of a 'bounded context' definition specialized to create a UI.
 
