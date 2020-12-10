@@ -14,3 +14,5 @@ export { default as QRCode }                from './ext/qrcode.mjs';
 
 import components                           from './@components';
 universe.addComponents(components);
+
+// export default {};
