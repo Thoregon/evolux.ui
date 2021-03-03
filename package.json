@@ -18,7 +18,5 @@
     "url": "https://github.com/Thoregon/evolux.ui/issues"
   },
   "homepage": "https://github.com/Thoregon/evolux.ui#readme",
-  "dependencies": {
-    "voca": "^1.4.0"
-  }
+  "dependencies": {}
 }
