@@ -11,8 +11,3 @@ export { default as UIElementBuilder }      from './lib/builder/elementbuilder.m
 
 // addons
 export { default as QRCode }                from './ext/qrcode.mjs';
-
-import components                           from './@components';
-universe.addComponents(components);
-
-// export default {};
